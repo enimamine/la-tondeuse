@@ -12,11 +12,14 @@ Par exemple, la position de la tondeuse peut être « 0, 0, N », ce qui signifi
 Si la position après mouvement est en dehors de la pelouse, la tondeuse ne bouge pas, conserve son orientation et traite la commande suivante. 
 
 on lui fournit un fichier d'entrée construit comme suit : 
+
 ● La première ligne correspond aux coordonnées du coin supérieur droit de la pelouse, celles du coin inférieur gauche sont supposées être (0,0) 
 
 ● La suite du fichier permet de piloter toutes les tondeuses qui ont été déployées.
+
  Chaque tondeuse a deux lignes la concernant : 
-● la première ligne donne la position initiale de la tondeuse, ainsi que son orientation. ● la seconde ligne est une série d'instructions, ce qui signifie que la seconde tondeuse ne bouge que lorsque la première a exécuté intégralement sa série d'instructions. 
+● la première ligne donne la position initiale de la tondeuse, ainsi que son orientation. 
+● la seconde ligne est une série d'instructions, ce qui signifie que la seconde tondeuse ne bouge que lorsque la première a exécuté intégralement sa série d'instructions. 
 
 Lorsqu'une tondeuse achève une série d'instruction, elle communique sa position et son orientation. 
 

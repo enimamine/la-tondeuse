@@ -50,13 +50,10 @@ public class Tondeuse {
 
     protected boolean isHorsPelouse() {
 
-        if ((y >= hauteurPelouse && orientation.equals(NORD)) ||
+        return (y >= hauteurPelouse && orientation.equals(NORD)) ||
                 (x >= longueurPelouse && orientation.equals(EST)) ||
                 (x <= 0 && orientation.equals(OUEST)) ||
-                (y <= 0 && orientation.equals(SUD))) {
-            return true;
-        }
-        return false;
+                (y <= 0 && orientation.equals(SUD));
     }
 
     public void tournerADroite() {

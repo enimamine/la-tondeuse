@@ -96,8 +96,8 @@ public class TondeuseTest {
     @Test
     public void isHorsPelouseHautTest() {
         tondeuse = new Tondeuse(3, 3, NORD, SEQUANCE_TEST);
-        tondeuse.longueurPelouse = 5;
-        tondeuse.hauteurPelouse = 5;
+        Tondeuse.longueurPelouse = 5;
+        Tondeuse.hauteurPelouse = 5;
         assertEquals(3, tondeuse.getY());
         assertEquals(false, tondeuse.isHorsPelouse());
         tondeuse.avancer();
@@ -111,8 +111,8 @@ public class TondeuseTest {
     @Test
     public void isHorsPelouseBasTest() {
         tondeuse = new Tondeuse(3, 3, SUD, SEQUANCE_TEST);
-        tondeuse.longueurPelouse = 5;
-        tondeuse.hauteurPelouse = 5;
+        Tondeuse.longueurPelouse = 5;
+        Tondeuse.hauteurPelouse = 5;
         assertEquals(3, tondeuse.getY());
         assertEquals(false, tondeuse.isHorsPelouse());
         tondeuse.avancer();
@@ -129,8 +129,8 @@ public class TondeuseTest {
     @Test
     public void isHorsPelouseDroiteTest() {
         tondeuse = new Tondeuse(3, 3, EST, SEQUANCE_TEST);
-        tondeuse.longueurPelouse = 5;
-        tondeuse.hauteurPelouse = 5;
+        Tondeuse.longueurPelouse = 5;
+        Tondeuse.hauteurPelouse = 5;
         assertEquals(3, tondeuse.getX());
         assertEquals(false, tondeuse.isHorsPelouse());
         tondeuse.avancer();
@@ -144,8 +144,8 @@ public class TondeuseTest {
     @Test
     public void isHorsPelouseGaucheTest() {
         tondeuse = new Tondeuse(3, 3, OUEST, SEQUANCE_TEST);
-        tondeuse.longueurPelouse = 5;
-        tondeuse.hauteurPelouse = 5;
+        Tondeuse.longueurPelouse = 5;
+        Tondeuse.hauteurPelouse = 5;
         assertEquals(3, tondeuse.getX());
         assertEquals(false, tondeuse.isHorsPelouse());
         tondeuse.avancer();

@@ -9,8 +9,8 @@ public class Starter {
 
     public static void main(String[] args) {
 
-        lireFichier();
         try {
+            lireFichier();
 
             for (Tondeuse tendeuse : tendeuses) {
                 tendeuse.deplacer();
@@ -23,6 +23,7 @@ public class Starter {
     }
 
     private static void lireFichier() {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Veuillez saisir le chemain vers le ficher des instructions des tondeuses:");
         /*   Exmelples de paths:

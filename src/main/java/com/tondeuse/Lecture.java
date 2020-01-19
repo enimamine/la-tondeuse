@@ -16,7 +16,7 @@ public class Lecture {
         this.fichier = fichier;
     }
 
-    List lire() {
+    public List lire() {
 
         // lecture du fichier
         try {

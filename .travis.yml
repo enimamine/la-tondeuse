@@ -7,9 +7,9 @@ cache:
   - .autoconf
   - $HOME/.m2
 jdk:
-  - oraclejdk8
- # - oraclejdk9
-  - openjdk8
+ # - oraclejdk8
+  - oraclejdk9
+  - openjdk9
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)

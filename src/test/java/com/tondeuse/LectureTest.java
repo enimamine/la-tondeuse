@@ -13,7 +13,8 @@ import static org.junit.Assert.assertEquals;
 public class LectureTest {
 
 
-    private static final String P£ATH_FILE = "/Users/amiaidel1/Documents/projets/tondeuse1/latondeuse-v2/src/main/resources/tondeuse.txt";
+    //local path
+    private static final String P£ATH_FILE = "./src/main/resources/tondeuse.txt";
 
     @Test
     public void nombreDeTondeusesTest() {

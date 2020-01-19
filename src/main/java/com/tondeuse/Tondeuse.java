@@ -122,4 +122,7 @@ public class Tondeuse {
         return orientation;
     }
 
+    public String getMouvementsSequance() {
+        return mouvementsSequance;
+    }
 }

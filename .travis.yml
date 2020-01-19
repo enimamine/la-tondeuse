@@ -11,5 +11,10 @@ jdk:
  # - oraclejdk9
   - openjdk9
 
+# Repo tokens are not required for public repos tested on Travis-Org, CircleCI or AppVeyor. Donc pas besoin de token dans notre cas !
+#env:
+#  global:
+#    - CODECOV_TOKEN=:uuid-repo-token
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)

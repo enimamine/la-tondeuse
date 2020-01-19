@@ -10,7 +10,7 @@ import java.util.List;
 public class Lecture {
 
     private String fichier;
-    private static List tendeuses = new ArrayList();
+    private List tendeuses = new ArrayList();
 
     public Lecture(String fichier) {
         this.fichier = fichier;

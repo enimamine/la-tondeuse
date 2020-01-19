@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class TondeuseTest {
 
     Tondeuse tondeuse;
-    static final String SEQUANCE_TEST = "AADAADADDA";
+    private static final String SEQUANCE_TEST = "AADAADADDA";
 
     @Test
     public void tournerADroiteInPlaceTest() {

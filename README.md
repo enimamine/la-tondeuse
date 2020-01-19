@@ -1,4 +1,5 @@
 # la-tondeuse
+
 exercice de la tondeuse qui tond le gazon !
 
 
@@ -6,7 +7,17 @@ exercice de la tondeuse qui tond le gazon !
 
 voir les résultats des builds sur le lien : https://travis-ci.org/enimamine/la-tondeuse
 
+# couverture de code Codecov avec JaCoCo
 
+exemple: https://codecov.io/gh/enimamine/la-tondeuse/tree/2676af553a74643d78ef576cb183d461f0bc3caf/src/main/java/com/tondeuse
+ 
+
+# Refrenciel GitHub 
+
+https://github.com/enimamine/la-tondeuse
+ 
+# Spécifications
+ 
 La position de la tondeuse est représentée par une combinaison de coordonnées (x,y) 
 et d'une lettre indiquant l'orientation selon la notation cardinale anglaise (N,E,W,S). 
 

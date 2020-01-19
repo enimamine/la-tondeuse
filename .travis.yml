@@ -1,0 +1,15 @@
+language: java
+sudo: false # faster builds
+install: mvn clean install -Dgpg.skip=true
+#./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+cache:
+  directories:
+  - .autoconf
+  - $HOME/.m2
+jdk:
+  - oraclejdk8
+  - oraclejdk9
+  - openjdk8
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

@@ -1,19 +1,19 @@
 package com.tondeuse;
 
+import static com.tondeuse.commons.Constants.*;
+
 public class Tondeuse {
 
-    public final String NORD = "N";
-    public final String SUD = "S";
-    public final String EST = "E";
-    public final String OUEST = "W";
 
-    static int longueurPelouse;
-    static int hauteurPelouse;
+    //taille de pelouse
+    public static int longueurPelouse;
+    public static int hauteurPelouse;
     // position de la tondeuse
     private int x;
     private int y;
     private String orientation;
     private String mouvementsSequance;
+
     private char mouvement;
 
     Tondeuse(int x, int y, String orientation, String mouvementsSequance) {
@@ -111,6 +111,18 @@ public class Tondeuse {
                 x++;
                 break;
         }
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public String getOrientation() {
+        return orientation;
     }
 
 }

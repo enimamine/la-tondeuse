@@ -52,7 +52,7 @@ public class Lecture {
             fileReader.close();
 
         } catch (IOException | ArrayIndexOutOfBoundsException | NumberFormatException e) {
-            System.out.println("Broblrème lors de la lecture");
+            System.out.println("Problème lors de la lecture du fichier");
         }
 
         return tendeuses;

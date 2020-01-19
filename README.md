@@ -1,5 +1,5 @@
 # la-tondeuse
-exercide de la tondeuse qui tond le gazon !
+exercice de la tondeuse qui tond le gazon !
 
 La position de la tondeuse est représentée par une combinaison de coordonnées (x,y) 
 et d'une lettre indiquant l'orientation selon la notation cardinale anglaise (N,E,W,S). 

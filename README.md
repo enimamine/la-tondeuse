@@ -1,6 +1,12 @@
 # la-tondeuse
 exercice de la tondeuse qui tond le gazon !
 
+
+# CI integration contunue avec TRAVIS 
+
+voir les résultats des builds sur le lien : https://travis-ci.org/enimamine/la-tondeuse
+
+
 La position de la tondeuse est représentée par une combinaison de coordonnées (x,y) 
 et d'une lettre indiquant l'orientation selon la notation cardinale anglaise (N,E,W,S). 
 

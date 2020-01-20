@@ -11,7 +11,6 @@ public class Starter {
 
         try {
             lireFichier();
-
             for (Tondeuse tendeuse : tendeuses) {
                 tendeuse.deplacer();
             }
@@ -25,10 +24,10 @@ public class Starter {
     private static void lireFichier() {
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Veuillez saisir le chemain vers le ficher des instructions des tondeuses:");
-        /*   Exmelples de paths:
-         *   /Users/amiaidel1/Documents/projets/tondeuse1/latondeuse-v2/src/main/resources/tondeuse.txt
-         *
+        System.out.println("Veuillez saisir le chemain vers le ficher des instructions des tondeuses ... ");
+        /*
+         *   Exmelples de path:
+         *   ./src/main/resources/tondeuse.txt
          */
 
         String path = scanner.nextLine();

@@ -1,5 +1,6 @@
 package com.tondeuse;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
@@ -14,13 +15,18 @@ public class LectureTest {
 
 
     //local path
-    private static final String P£ATH_FILE = "./src/main/resources/tondeuse.txt";
+    private static final String PATH_FILE = "./src/main/resources/tondeuse.txt";
+
+    private List<Tondeuse> tendeuses;
+
+    @Before
+    public void initialiser() {
+        Lecture fichier = new Lecture(PATH_FILE);
+        tendeuses = fichier.lire();
+    }
 
     @Test
     public void nombreDeTondeusesTest() {
-
-        Lecture fichier = new Lecture(P£ATH_FILE);
-        List<Tondeuse> tendeuses = fichier.lire();
 
         assertEquals(2, tendeuses.size());
     }
@@ -28,19 +34,17 @@ public class LectureTest {
     @Test
     public void lectureTondeuseTest() {
 
-        Lecture fichier1 = new Lecture(P£ATH_FILE);
-        List<Tondeuse> tendeuses = fichier1.lire();
-
         assertEquals(1, tendeuses.get(0).getX());
         assertEquals(2, tendeuses.get(0).getY());
         assertEquals(NORD, tendeuses.get(0).getOrientation());
         assertEquals("GAGAGAGAA", tendeuses.get(0).getMouvementsSequance());
-
-        assertEquals(5, tendeuses.get(0).longueurPelouse);
-        assertEquals(5, tendeuses.get(0).hauteurPelouse);
-
-
     }
 
+    @Test
+    public void lecturePelouseTest() {
+
+        assertEquals(5, tendeuses.get(0).getPelouse().getLongueurPelouse());
+        assertEquals(5, tendeuses.get(0).getPelouse().getHauteurPelouse());
+    }
 
 }

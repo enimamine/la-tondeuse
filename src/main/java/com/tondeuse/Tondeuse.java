@@ -4,23 +4,21 @@ import static com.tondeuse.commons.Constants.*;
 
 public class Tondeuse {
 
-
-    //taille de pelouse
-    public static int longueurPelouse;
-    public static int hauteurPelouse;
     // position de la tondeuse
     private int x;
     private int y;
     private String orientation;
     private String mouvementsSequance;
+    private Pelouse pelouse ;
 
     private char mouvement;
 
-    Tondeuse(int x, int y, String orientation, String mouvementsSequance) {
+    public Tondeuse(int x, int y, String orientation, String mouvementsSequance, Pelouse pelouse) {
         this.x = x;
         this.y = y;
         this.orientation = orientation;
         this.mouvementsSequance = mouvementsSequance;
+        this.pelouse=pelouse;
     }
 
     public void deplacer() {
@@ -44,14 +42,14 @@ public class Tondeuse {
             }
 
         }
-
-        System.out.println("Position finale de la tondeuse : " + x + ", " + y + ", " + orientation);
+        //communiquer la position de la tondeuse
+        System.out.println(x + " " + y + " " + orientation);
     }
 
     protected boolean isHorsPelouse() {
 
-        return (y >= hauteurPelouse && orientation.equals(NORD)) ||
-                (x >= longueurPelouse && orientation.equals(EST)) ||
+        return (y >= pelouse.getHauteurPelouse() && orientation.equals(NORD)) ||
+                (x >= pelouse.getLongueurPelouse() && orientation.equals(EST)) ||
                 (x <= 0 && orientation.equals(OUEST)) ||
                 (y <= 0 && orientation.equals(SUD));
     }
@@ -124,5 +122,9 @@ public class Tondeuse {
 
     public String getMouvementsSequance() {
         return mouvementsSequance;
+    }
+
+    public Pelouse getPelouse() {
+        return pelouse;
     }
 }

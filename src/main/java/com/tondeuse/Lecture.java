@@ -10,7 +10,6 @@ import java.util.List;
 public class Lecture {
 
     private String fichier;
-    private List tendeuses = new ArrayList();
 
     public Lecture(String fichier) {
         this.fichier = fichier;
@@ -18,6 +17,8 @@ public class Lecture {
 
     public List lire() {
 
+        List tendeuses = new ArrayList();
+        Pelouse pelouse = null;
         // lecture du fichier
         try {
             FileReader fileReader = new FileReader(fichier);
@@ -34,13 +35,11 @@ public class Lecture {
 
                 if (count == 0) {
                     // initialisation de la peulouse
-                    Tondeuse.longueurPelouse = Integer.parseInt(splitLigne[0]);
-                    Tondeuse.hauteurPelouse = Integer.parseInt(splitLigne[1]);
-                    System.out.println("Taille de la pelouse : " + splitLigne[0] + " " + splitLigne[1]);
+                    pelouse = new Pelouse(Integer.parseInt(splitLigne[0]), Integer.parseInt(splitLigne[1]));
                 } else {
                     // sinon instencier  une nouvelle tondeuse
                     ligne = bufferReader.readLine();
-                    tondeuse = new Tondeuse(Integer.parseInt(splitLigne[0]), Integer.parseInt(splitLigne[1]), splitLigne[2], ligne);
+                    tondeuse = new Tondeuse(Integer.parseInt(splitLigne[0]), Integer.parseInt(splitLigne[1]), splitLigne[2], ligne, pelouse);
                     // verifier que la tondeuse est bien dans la pelouse avant de l'ajouter à notre liste...
                     if (!tondeuse.isHorsPelouse()) {
                         tendeuses.add(tondeuse);

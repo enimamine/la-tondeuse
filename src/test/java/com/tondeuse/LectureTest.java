@@ -36,6 +36,10 @@ public class LectureTest {
         assertEquals(NORD, tendeuses.get(0).getOrientation());
         assertEquals("GAGAGAGAA", tendeuses.get(0).getMouvementsSequance());
 
+        assertEquals(5, tendeuses.get(0).longueurPelouse);
+        assertEquals(5, tendeuses.get(0).hauteurPelouse);
+
+
     }
 
 
